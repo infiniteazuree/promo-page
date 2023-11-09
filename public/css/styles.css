@@ -1,0 +1,318 @@
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 5px); }
+    100%   { transform: translate(0, 0px); }   
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes bang {
+  from {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+html, body{
+    height: 100%;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.floating{
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.shaking{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.small{
+    transition: 0;
+    transform: scale(0.4);
+}
+
+audio, embed {
+    position: absolute;
+    z-index: -9999;
+    opacity: 0;
+}
+body{
+    background-image: url(/img/wheel/desktop_background.png);
+    background-size: cover;
+    background-position: center;
+}
+.logo-center{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30vw;
+    transform: translate(-50%, 20%);
+}
+.btn-orange{
+    background-color: orange;
+}
+.btn, .btn:hover, .btn:active{
+    color: white!important;
+}
+/* .modal.fade .modal-dialog {
+  transform: translate3d(0, 0%, 0);
+}
+.modal.in .modal-dialog {
+  transform: translate3d(0, 0, 0);
+}
+.modal-backdrop{
+    background-color: rgb(202, 202, 202);
+}
+.modal-content{
+    background: transparent;
+    border: 0;
+} */
+.cursor-pointer{
+    cursor: pointer;
+}
+.angpao-item{
+    transition: 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+.angpao-wrapper{
+    width: 65vw;
+    max-width: 768px;
+}
+.angpao-item img{
+    transition: 0.3s;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+.angpao-value{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.ingame-start{
+    display: flex;
+}
+.show-value .angpao-value{
+    z-index: 100;
+}
+#wonMoney{
+    font-size: 60px;
+    color: yellow;
+    padding: 10px 30px;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    background-color: red;
+}
+.volume-wrapper img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+.error-text{
+    display: block;
+    width: 100%;
+    color: red;
+}
+
+/* spin css */
+#canvasContainer {
+    position: relative;
+    width: 540px;
+    padding: 100px 0;
+    z-index: 2;
+}
+#canvas {
+    z-index: 1;
+}
+#prizePointer {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -33%);
+    z-index: 999;
+    width: 120px;
+}
+#prizeCenter{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#zeus{
+    position: absolute;
+    bottom: -12%;
+    left: -58%;
+    width: 420px;
+}
+.menu-wrapper{
+    position: relative;
+    min-height: 500px;
+}
+.menu-bg{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.custom-input{
+    border-radius: 100px;
+    font-size: 32px;
+    width: 70%;
+    border: none;
+    padding: 0px 16px;
+    text-align: center;
+    box-shadow: 1px 4px 6px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 4px 6px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 4px 6px 1px rgba(0,0,0,0.75);
+}
+.custom-row{
+    display: flex;
+    flex-direction: row;
+}
+#menuContainer {
+    flex-grow: 1;
+}
+.logo-mobile {
+    display: none;
+}
+#wheelBorder{
+    position: absolute;
+    width: 540px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+.custom-input-box{
+    padding: 30px;
+}
+.mobile-form-logo{
+    display: none;
+}
+.chest-modal {
+    background-color: transparent;
+    min-height: 500px;
+    background-image: url(/img/wheel/desktop_frame.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: visible;
+}
+.chest{
+    width: 60%;
+    position: relative;
+}
+.chest img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -120px;
+}
+.chest-text{
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+    line-height: 1.2;
+    transition: 0.3s;
+}
+.text-closed{
+    transform: scaleY(0);
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 990px) {
+    html, body{
+        height: initial;
+    }
+    .menu-bg{
+        display: none;
+    }
+    .desktop-form-logo{
+        display: none;
+    }
+    .mobile-form-logo{
+        display: block;
+    }
+    body{
+        background-image: url(/img/wheel/mobile_background.png);
+        background-size: 100% 100%;
+        background-position: bottom;
+    }
+    .custom-input-box {
+        background-image: url(/img/wheel/desktop_frame.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .logo-desktop{
+        display: none;
+    }
+    .logo-mobile{
+        display: block;
+    }
+    #canvasContainer{
+        width: 300px;
+        padding: 16px 0;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #prizePointer {
+        left: 50%;
+        transform: translate(-50%, -45%);
+        z-index: 999;
+        width: 70px;
+    }
+    #prizeCenter{
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #wheelBorder{
+        width: 100%;
+        transform: translateY(-51%) scale(1.1);
+    }
+    #zeus{
+        display: none;
+    }
+    .logo-center{
+        top: 0;
+        left: 50%;
+        width: 50vw;
+        transform: translate(-50%, 20%);
+    }
+    .angpao-wrapper{
+        width: 75vw;
+    }
+    .custom-row {
+        flex-direction: column;
+        padding-top: 170px;
+    }
+    .custom-input{
+        width: 90%;
+    }
+    .menu-wrapper{
+        min-height: initial;
+    }
+}
