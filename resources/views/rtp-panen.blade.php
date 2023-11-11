@@ -698,7 +698,7 @@
         <div class="top-observer"></div>
         <script src="{{ asset('js/mobile.js') }}" defer></script>
         <script src="{{ asset('js/javascript_alxgroup.js') }}"></script>
-        <script src="{{ asset('js/main.js') }}"></script>
+        <script src="{{ asset('js/main-panen.js') }}"></script>
 
         <script>
             let slideIndex = 1;
